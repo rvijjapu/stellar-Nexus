@@ -58,13 +58,7 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-   .stApp {
-        background: linear-gradient(to bottom, rgba(255,255,255,0.92), rgba(240,248,255,0.88)),
-                    url('https://www.shutterstock.com/image-photo/businessman-switching-pictures-on-modern-interface-420576952') no-repeat center center fixed;
-        background-size: cover;
-        color: #1e293b;
-        padding-top: 0.5rem;
-    }
+  .stApp { background: url('https://thumbs.wbm.im/pw/medium/e335e37d5f2ad92039f7ce87860ea5e7.jpg') no-repeat center center fixed; background-size: cover; }
     .header-container {
         background: rgba(255, 255, 255, 0.95);
         padding: 1.2rem 1.5rem;
