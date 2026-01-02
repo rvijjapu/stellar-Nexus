@@ -59,7 +59,7 @@ st.set_page_config(
 st.markdown("""
 <style>
  .stApp {
-    background: url('https://raw.githubusercontent.com/rvijjapu/stellar-Nexus/main/image%20(2).jpg') no-repeat center center fixed;
+    background: url('https://raw.githubusercontent.com/rvijjapu/stellar-Nexus/main/image%20(3).jpg') no-repeat center center fixed;
     background-size: cover;
     color: #1e293b;
     padding-top: 0.5rem;
