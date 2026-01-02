@@ -63,7 +63,7 @@ st.markdown("""
     background-size: cover;
     color: #1e293b;
     padding-top: 0.5rem;
-}
+   }
     .header-container {
         background: rgba(255, 255, 255, 0.95);
         padding: 1.2rem 1.5rem;
