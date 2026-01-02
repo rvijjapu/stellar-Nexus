@@ -58,11 +58,17 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-    .stApp {
-    background: url('://i.ibb.co/PstYJ8Hr/httpsimage.jpg') no-repeat center center fixed;
-    background-size: cover;
+   .stApp {
+    background:
+        radial-gradient(circle at 15% 85%, rgba(147, 197, 253, 0.45), transparent 45%),
+        radial-gradient(circle at 85% 15%, rgba(191, 219, 254, 0.4), transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(125, 211, 252, 0.3), transparent 60%),
+        linear-gradient(135deg, #f8fcff 0%, #eef6ff 30%, #e1efff 60%, #d4e8ff 100%);
+    background-attachment: fixed;
     color: #1e293b;
     padding-top: 0.5rem;
+    position: relative;
+    overflow: hidden;
 }
 
     .header-container {
