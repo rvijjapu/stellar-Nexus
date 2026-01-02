@@ -59,14 +59,11 @@ st.set_page_config(
 st.markdown("""
 <style>
     .stApp {
-        background: linear-gradient(180deg, #f0f4f8 0%, #e2e8f0 100%);
-    }
-
- #MainMenu, footer, header {visibility: hidden;}
-
-    .block-container {
-        padding-top: 1rem !important;
-    }
+    background: url('://i.ibb.co/PstYJ8Hr/httpsimage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #1e293b;
+    padding-top: 0.5rem;
+}
 
     .header-container {
         background: rgba(255, 255, 255, 0.95);
