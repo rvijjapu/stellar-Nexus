@@ -58,7 +58,7 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-   ..stApp {
+   .stApp {
         background: linear-gradient(to bottom, rgba(255,255,255,0.92), rgba(240,248,255,0.88)),
                     url('https://www.shutterstock.com/image-photo/businessman-switching-pictures-on-modern-interface-420576952') no-repeat center center fixed;
         background-size: cover;
