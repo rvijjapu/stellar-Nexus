@@ -59,11 +59,12 @@ st.set_page_config(
 st.markdown("""
 <style>
    .stApp {
-    background: url('https://images.unsplash.com/photo-1712847333739-043e8e4d8a42?q=80&w=2070') no-repeat center center fixed;
+    background: linear-gradient(to bottom, #ffffff 0%, #e8f4ff 30%, #d0ebff 100%), 
+                url('https://images.unsplash.com/photo-1712847333739-043e8e4d8a42?q=80&w=2070') no-repeat center center fixed;
     background-size: cover;
     color: #1e293b;
     padding-top: 0.5rem;
-   }
+      }
     .header-container {
         background: rgba(255, 255, 255, 0.95);
         padding: 1.2rem 1.5rem;
