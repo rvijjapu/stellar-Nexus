@@ -58,7 +58,7 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-   .stApp { background: url('https://www.shutterstock.com/image-vector/ai-technology-poster-cute-robot-260nw-2344238167.jpg') no-repeat center center fixed; background-size: cover; }
+   .stApp { background: url('https://unsplash.com/photos/a-couple-of-little-robots-standing-next-to-each-other-aaujbh59zqI') no-repeat center center fixed; background-size: cover; }
     .header-container {
         background: rgba(255, 255, 255, 0.95);
         padding: 1.2rem 1.5rem;
