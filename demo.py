@@ -58,7 +58,7 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-  .stApp { background: url('https://thumbs.wbm.im/pw/medium/e335e37d5f2ad92039f7ce87860ea5e7.jpg') no-repeat center center fixed; background-size: cover; }
+  .stApp { background: url('https://github.com/rvijjapu/stellar-Nexus/blob/main/image.jpg') no-repeat center center fixed; background-size: cover; }
     .header-container {
         background: rgba(255, 255, 255, 0.95);
         padding: 1.2rem 1.5rem;
