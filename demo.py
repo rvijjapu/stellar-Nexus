@@ -228,7 +228,7 @@ st.markdown("""
 st.markdown("""
 <div class="header-container">
     <h1 class="main-title">🌐 Global Telecom & OTT Stellar Nexus</h1>
-    <p class="subtitle">AI-Powered Competitive Intelligence • Google OSS/BSS First</p>
+    <p class="subtitle">AI-Powered Competitive Intelligence</p>
 </div>
 """, unsafe_allow_html=True)
 
