@@ -126,7 +126,7 @@ st.markdown("""
             </div>
         </div>
         <div class="hero-box" style="flex: 1;">
-            <div style="font-weight:800; color:#f97316; font-size:1.1rem; margin-bottom:12px;">🟠 TECH PULSE: AGENTIC REALITY</div>
+            <div style="font-weight:800; color:#f97316; font-size:1.1rem; margin-bottom:12px;">🟠 PULSE </div>
             <div style="color:#1e293b; font-size:0.95rem; line-height:1.7;">
                 <b>Agentic AI Core:</b> By EOY 2026, autonomous AI agents are expected to handle roughly 40% of standard BSS operational tasks. <br>
                 <b>Satellite Breakout:</b> Direct-to-consumer satellite broadband moves from niche to mainstream as a primary fiber competitor. <br>
