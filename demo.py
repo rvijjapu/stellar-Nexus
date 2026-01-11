@@ -156,7 +156,7 @@ sections = [
         "NFL Media sale to Disney in exchange for ESPN equity expected to close by next season.",
         "Sub-3-second latency becomes the industry standard for real-time sports commerce models."
     ]),
-    ("⚡ TECHIE AI", "#ea580c", [
+    ("⚡ AI TECHWATCH", "#ea580c", [
         "AI evolves from expertise in diagnostics to areas like symptom triage and treatment planning.",
         "Flexible, global AI 'superfactories' drive down compute costs and improve efficiency.",
         "Quantum-hybrid computing gains ground in modeling molecules and materials with high accuracy."
