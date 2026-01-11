@@ -118,7 +118,7 @@ st.markdown("""
     <div class="hero-title">🚀 STRATEGIC BASELINE</div>
     <div style="display: flex; gap: 20px;">
         <div class="hero-box" style="flex: 1;">
-            <div style="font-weight:800; color:#10b981; font-size:1.1rem; margin-bottom:12px;">🟢 STRATEGIC HITS (JAN 2026)</div>
+            <div style="font-weight:800; color:#10b981; font-size:1.1rem; margin-bottom:12px;">🟢 STRATEGIC HITS </div>
             <div style="color:#1e293b; font-size:0.95rem; line-height:1.7;">
                 <b>Amdocs-Matrixx Deal:</b> Amdocs completes its $200M acquisition of charging leader Matrixx Software to dominate the Tier-1 5G billing market. <br>
                 <b>Disney-Hulu Merger:</b> Disney officially begins phasing out the standalone Hulu app to integrate all content into a unified Disney+ hub. <br>
