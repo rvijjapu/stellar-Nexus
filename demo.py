@@ -115,7 +115,7 @@ st.markdown("<h1 class='dark-blue-text' style='text-align: center; font-size: 3.
 # 🚀 HIGHLIGHTS (TOP SECTION)
 st.markdown("""
 <div class="hero-container">
-    <div class="hero-title">🚀 STRATEGIC BASELINE</div>
+    <div class="hero-title">🚀 HIGHLIGHTS</div>
     <div style="display: flex; gap: 20px;">
         <div class="hero-box" style="flex: 1;">
             <div style="font-weight:800; color:#10b981; font-size:1.1rem; margin-bottom:12px;">🟢 STRATEGIC HITS </div>
