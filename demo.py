@@ -5,6 +5,12 @@ from datetime import datetime
 # 1. PAGE CONFIGURATION
 st.set_page_config(page_title="Global Intelligence Stellar Nexus", layout="wide")
 
+# --- 1. NEVER-SLEEP / KEEP-ALIVE FRAGMENT ---
+# Resets inactivity timer every 10 minutes to prevent hibernation
+@st.fragment(run_every=600)
+def keep_alive():
+    st.markdown("", unsafe_allow_html=True)
+
 # 2. PREMIUM CSS: Background, Visibility, and Impactful Loading
 st.markdown("""
 <style>
