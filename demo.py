@@ -112,7 +112,7 @@ placeholder.empty()
 # 4. MAIN DASHBOARD CONTENT
 st.markdown("<h1 class='dark-blue-text' style='text-align: center; font-size: 3.2rem; margin-bottom: 30px;'>Global Telecom & OTT Stellar Nexus</h1>", unsafe_allow_html=True)
 
-# 🚀 STRATEGIC BASELINE HERO (TOP SECTION)
+# 🚀 HIGHLIGHTS (TOP SECTION)
 st.markdown("""
 <div class="hero-container">
     <div class="hero-title">🚀 STRATEGIC BASELINE</div>
