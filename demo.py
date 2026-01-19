@@ -338,7 +338,7 @@ st.markdown("""
 # STRATEGIC SECTION – EXACTLY 3 HITS + 3 PULSE (balanced & distinct)
 st.markdown("""
 <div class="hero-container">
-    <div class="hero-title">🚀 Strategic Intelligence (Jan 2026)</div>
+    <div class="hero-title">🚀 Strategic Intelligence </div>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
         <div class="hero-box">
             <div class="hero-box-title" style="color: #10b981;">🟢 STRATEGIC HITS</div>
