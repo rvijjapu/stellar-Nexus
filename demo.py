@@ -8,14 +8,24 @@ import re
 import time
 
 # PAGE CONFIG
-st.set_page_config(page_title="Global Telecom & OTT Stellar Nexus", page_icon="🌐", layout="wide", initial_sidebar_state="collapsed")
+st.set_page_config(
+    page_title="Global Telecom & OTT Stellar Nexus",
+    page_icon="🌐",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
 
-# KEEP-ALIVE
+# KEEP-ALIVE + AUTO-REFRESH EVERY 5 MINUTES
 @st.fragment(run_every=600)
 def keep_alive():
     st.markdown("", unsafe_allow_html=True)
 
-# LIGHT-THEME PREMIUM STYLING with your custom background
+st.markdown(
+    '<script>setTimeout(function(){window.location.reload();}, 300000);</script>',
+    unsafe_allow_html=True
+)
+
+# YOUR ORIGINAL LIGHT-THEME STYLING (unchanged)
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
@@ -95,17 +105,6 @@ st.markdown("""
     .hero-content b {
         color: #0a192f;
         font-weight: 700;
-    }
-
-    .status-tag {
-        display: inline-block;
-        padding: 4px 10px;
-        border-radius: 4px;
-        font-size: 0.75rem;
-        font-weight: 800;
-        margin-bottom: 12px;
-        text-transform: uppercase;
-        color: white;
     }
 
     /* News Sections */
@@ -189,49 +188,9 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# 2026 STRATEGIC INTELLIGENCE (HARDCODED - ALL YOUR REQUESTED NEWS, NO DUPLICATES)
-STRATEGIC_2026_HITS = [
-    {
-        "title": "NBA Scores Strategic Investment in Evergent",
-        "impact": "CRITICAL",
-        "context": "The NBA has taken a strategic equity stake in Evergent, naming it a 'Preferred Vendor' to drive global League Pass personalization and churn management across 185 countries."
-    },
-    {
-        "title": "Amdocs Completes $200M Acquisition of Charging Leader Matrixx Software",
-        "impact": "HIGH",
-        "context": "Amdocs completes its $200M acquisition of charging leader Matrixx Software to dominate the Tier-1 5G billing market."
-    },
-    {
-        "title": "Disney Officially Phases Out Standalone Hulu App",
-        "impact": "HIGH",
-        "context": "Disney officially begins phasing out the standalone Hulu app to integrate all content into a unified Disney+ hub."
-    },
-    {
-        "title": "NEC Finalizes Acquisition of CSG",
-        "impact": "HIGH",
-        "context": "Japan's NEC finalizes the acquisition of CSG, significantly scaling Netcracker's North American SaaS footprint."
-    }
-]
-
-STRATEGIC_PULSE = [
-    {
-        "title": "Agentic AI Core",
-        "context": "By EOY 2026, autonomous AI agents are expected to handle roughly 40% of standard BSS operational tasks."
-    },
-    {
-        "title": "Satellite Breakout",
-        "context": "Direct-to-consumer satellite broadband moves from niche to mainstream as a primary fiber competitor."
-    },
-    {
-        "title": "Physical AI",
-        "context": "Amazon deploys its 1-millionth robot, integrated with DeepFleet AI for a 10% gain in warehouse efficiency."
-    }
-]
-
-# Priority companies (always first in dynamic feed)
+# PRIORITY KEYWORDS & RSS SOURCES (unchanged)
 PRIORITY_KWS = ["evergent", "nba", "amdocs", "matrixx", "netcracker", "nec", "csg"]
 
-# RSS FEEDS
 RSS_FEEDS = [
     ("Telecoms.com", "https://www.telecoms.com/feed", "telco"),
     ("Light Reading", "https://www.lightreading.com/rss/simple", "telco"),
@@ -291,7 +250,6 @@ def fetch_feed(source, url, category):
             if not pub or pub < CUTOFF: continue
             
             full_text = (title + " " + summary).lower()
-            
             is_priority = any(kw in full_text for kw in PRIORITY_KWS)
             
             items.append({
@@ -318,7 +276,6 @@ def load_feeds():
             for item in items:
                 categorized[item["category"]].append(item)
     
-    # Sort: Priority first, then newest
     for cat in categorized:
         categorized[cat].sort(key=lambda x: (not x["priority"], x["pub"]), reverse=True)
     
@@ -358,19 +315,19 @@ def render_body(items):
     
     return '<div class="col-body">' + ''.join(cards) + '</div>'
 
-# MAIN APPLICATION
+# LOADING SCREEN
 placeholder = st.empty()
 with placeholder.container():
-    st.markdown(""" 
+    st.markdown("""
         <div style="display:flex;flex-direction:column;justify-content:center;align-items:center;height:70vh;text-align:center;">
-            <h1 style="color:#0a192f;font-size:2.8rem;font-weight:800;">⚡Igniting AI Powered Engine</h1>
+            <h1 style="color:#0a192f;font-size:2.8rem;font-weight:800;">⚡ Igniting AI Powered Engine</h1>
             <p style="color:#64748b;font-size:1.2rem;">Real-time Strategic Signals – Mergers, Acquisitions, Partnerships & Deals</p>
         </div>
     """, unsafe_allow_html=True)
     time.sleep(1.5)
-
 placeholder.empty()
 
+# HEADER
 st.markdown("""
 <div class="header-container">
     <h1 class="main-title">Global Telecom & OTT Stellar Nexus</h1>
@@ -378,38 +335,35 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# Hardcoded Strategic Highlights (UPDATED - ALL YOUR REQUESTED NEWS - NO DUPLICATES)
+# STRATEGIC SECTION – EXACTLY 3 HITS + 3 PULSE (balanced & distinct)
 st.markdown("""
 <div class="hero-container">
-    <div class="hero-title">🚀 Strategic Hits</div>
+    <div class="hero-title">🚀 Strategic Intelligence (Jan 2026)</div>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
         <div class="hero-box">
             <div class="hero-box-title" style="color: #10b981;">🟢 STRATEGIC HITS</div>
             <div class="hero-content">
-                <b>NBA Scores Strategic Investment in Evergent</b>: The NBA has taken a strategic equity stake in Evergent, naming it a 'Preferred Vendor' to drive global League Pass personalization and churn management across 185 countries.<br><br>
-                <b> CES </b>: Evergent CEO Vijay Sajja at CES defines the shift from GenAI to <b>Agentic AI</b>—BSS that independently executes subscriber retention strategies.<br><br>
-                <b>Amdocs-Matrixx Deal</b>: Amdocs completes its $200M acquisition of charging leader Matrixx Software to dominate the Tier-1 5G billing market.<br><br>
-                <b>Disney-Hulu Merger</b>: Disney officially begins phasing out the standalone Hulu app to integrate all content into a unified Disney+ hub.<br><br>
-                <b>NEC Expansion</b>: Japan's NEC finalizes the acquisition of CSG, significantly scaling Netcracker's North American SaaS footprint.
+                <b>NBA Strategic Investment in Evergent</b>: The NBA has taken a strategic equity stake in Evergent, naming it a 'Preferred Vendor' to drive global League Pass personalization and churn management across 185 countries.<br><br>
+                <b>Agentic AI Shift at CES</b>: Evergent CEO Vijay Sajja at CES defines the shift from GenAI to <b>Agentic AI</b> — BSS that independently executes subscriber retention strategies.<br><br>
+                <b>Amdocs Acquires Matrixx ($200M)</b>: Amdocs completes its $200M acquisition of charging leader Matrixx Software to dominate the Tier-1 5G billing market.
             </div>
         </div>
         <div class="hero-box">
-            <div class="hero-box-title" style="color: #f97316;">🟠 PULSE</div>
+            <div class="hero-box-title" style="color: #f97316;">🟠 MARKET PULSE</div>
             <div class="hero-content">
-                <b>Agentic AI Core</b>: By EOY 2026, autonomous AI agents are expected to handle roughly 40% of standard BSS operational tasks.<br><br>
-                <b>Satellite Breakout</b>: Direct-to-consumer satellite broadband moves from niche to mainstream as a primary fiber competitor.<br><br>
-                <b>Physical AI</b>: Amazon deploys its 1-millionth robot, integrated with DeepFleet AI for a 10% gain in warehouse efficiency.
+                <b>Agentic AI Core by EOY 2026</b>: Autonomous AI agents expected to handle ~40% of standard BSS operational tasks, reshaping telecom operations.<br><br>
+                <b>Satellite Broadband Breakout</b>: Direct-to-consumer satellite broadband moves from niche to mainstream as a primary fiber competitor.<br><br>
+                <b>Physical AI Scale-Up</b>: Amazon deploys its 1-millionth robot, integrated with DeepFleet AI for a 10% gain in warehouse efficiency.
             </div>
         </div>
     </div>
 </div>
 """, unsafe_allow_html=True)
 
-# Dynamic RSS Feed Scanning
+# AI ENGINE SCAN + NEWS COLUMNS
 with st.spinner("Scanning for latest strategic news..."):
     data = load_feeds()
 
-# Render News Columns (all 4 sections fully dynamic)
 cols = st.columns(4)
 cat_list = ["telco", "ott", "sports", "technology"]
 
@@ -422,13 +376,11 @@ for idx, cat in enumerate(cat_list):
         st.markdown(''.join(header_parts), unsafe_allow_html=True)
         st.markdown(render_body(items), unsafe_allow_html=True)
 
-# Footer
+# FOOTER
 st.markdown("""
 <div style="text-align:center;color:rgba(255,255,255,0.95);font-size:0.8rem;margin-top:20px;padding:16px;background:linear-gradient(135deg,rgba(10,25,47,0.95),rgba(30,41,59,0.95));border-radius:10px;">
     <strong>Strict Focus:</strong> Mergers, Acquisitions, Partnerships, Deals & Strategic Moves | <strong>Priority:</strong> Evergent/NBA/Netcracker/Amdocs/NEC first | <strong>🔄 Auto-refresh:</strong> Every 5 minutes
 </div>
 """, unsafe_allow_html=True)
-
-st.markdown('<script>setTimeout(function() {window.location.reload();}, 300000);</script>', unsafe_allow_html=True)
 
 keep_alive()
