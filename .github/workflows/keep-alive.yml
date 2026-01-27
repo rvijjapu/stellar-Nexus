@@ -1,0 +1,15 @@
+name: Keep Stellar Nexus Awake
+
+on:
+  schedule:
+    - cron: '0 */4 * * *'  # Runs every 4 hours (change to */3 for every 3 hours if you want more aggressive)
+  workflow_dispatch:       # Lets you manually trigger it from Actions tab
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send wake-up ping
+        run: |
+          curl -s -o /dev/null -w "%{http_code}" https://stellar-nexus.streamlit.app/
+          echo "Ping sent to https://stellar-nexus.streamlit.app/ - should prevent sleep"
